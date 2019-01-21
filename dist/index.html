@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>vue-svg-loading demo</title>
+</head>
+<body>
+<div id="app">
+  <h1>vue-svg-loading demo</h1>
+  <svg-loading></svg-loading>
+  <br>
+  <svg-loading :size="20"></svg-loading>
+  <br>
+  <svg-loading fill="#f00"></svg-loading>
+  <br>
+  <svg-loading :size="200" fill="blue"></svg-loading>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+<script src="vue-svg-loading.min.js"></script>
+<script>
+Vue.use(SvgLoading);
+new Vue({
+  el: '#app'
+});
+</script>
+</body>
+</html>

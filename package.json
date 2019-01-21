@@ -1,0 +1,57 @@
+{
+  "name": "@inotom/vue-svg-loading",
+  "version": "1.0.0",
+  "description": "SVG loading animation Vue.js component.",
+  "main": "dist/vue-svg-loading.umd.js",
+  "cdn": "dist/vue-svg-loading.min.js",
+  "config": {
+    "dist_dir": "dist",
+    "src_dir": "src"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "prebuild": "rimraf $npm_package_config_dist_dir/hello-vue.* && npm run clean && npm test",
+    "build": "NODE_ENV=production webpack -p --config config/webpack.prod.js",
+    "clean": "rimraf '**/.DS_Store'",
+    "lint": "eslint $npm_package_config_src_dir",
+    "prettier": "prettier --write 'src/**/*.js'",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inotom/vue-svg-loading.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "inotom (http://www.serendip.ws/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inotom/vue-svg-loading/issues"
+  },
+  "homepage": "https://github.com/inotom/vue-svg-loading#readme",
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "autoprefixer": "9.4.5",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
+    "css-loader": "2.1.0",
+    "eslint": "5.12.1",
+    "eslint-plugin-vue": "5.1.0",
+    "node-sass": "4.11.0",
+    "postcss-loader": "3.0.0",
+    "prettier": "1.16.0",
+    "rimraf": "2.6.3",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "uglifyjs-webpack-plugin": "2.1.1",
+    "vue": "2.5.22",
+    "vue-loader": "15.5.1",
+    "vue-template-compiler": "2.5.22",
+    "webpack": "4.29.0",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14",
+    "webpack-merge": "4.2.1"
+  }
+}
