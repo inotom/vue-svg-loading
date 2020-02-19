@@ -90,11 +90,11 @@ $PI: 3.141592;
     stroke-dashoffset: calc(#{$PI} * 20px / 1.5);
   }
   50% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
     stroke-dashoffset: calc(#{$PI} * 20px / 8);
   }
   100% {
-    transform: rotate(-720deg);
+    transform: rotate(720deg);
     stroke-dashoffset: calc(#{$PI} * 20px / 1.5);
   }
 }
@@ -105,11 +105,11 @@ $PI: 3.141592;
     stroke-dashoffset: calc(#{$PI} * 40px / 1.5);
   }
   50% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
     stroke-dashoffset: calc(#{$PI} * 40px / 8);
   }
   100% {
-    transform: rotate(-720deg);
+    transform: rotate(720deg);
     stroke-dashoffset: calc(#{$PI} * 40px / 1.5);
   }
 }
@@ -120,11 +120,11 @@ $PI: 3.141592;
     stroke-dashoffset: calc(#{$PI} * 80px / 1.5);
   }
   50% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
     stroke-dashoffset: calc(#{$PI} * 80px / 8);
   }
   100% {
-    transform: rotate(-720deg);
+    transform: rotate(720deg);
     stroke-dashoffset: calc(#{$PI} * 80px / 1.5);
   }
 }
@@ -134,10 +134,10 @@ $PI: 3.141592;
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
   100% {
-    transform: rotate(-720deg);
+    transform: rotate(720deg);
   }
 }
 
