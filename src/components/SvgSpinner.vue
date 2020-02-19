@@ -72,6 +72,12 @@ export default {
       }
     },
   },
+
+  created() {
+    const ua = navigator.userAgent.toLowerCase();
+    const rootClassName = ua.indexOf('trident/7') === -1 ? 'is-not-ie11-svg-spinner' : 'is-ie11-svg-spinner';
+    document.documentElement.classList.add(rootClassName);
+  },
 };
 </script>
 
@@ -123,7 +129,23 @@ $PI: 3.141592;
   }
 }
 
+@keyframes svg-spinner-rotation-ie11 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+
 .svg-spinner {
+  @at-root .is-ie11-svg-spinner & {
+    animation: svg-spinner-rotation-ie11 3s linear infinite 0s;
+  }
+
   &__circle {
     transform-origin: 50% 50%;
 
@@ -134,6 +156,11 @@ $PI: 3.141592;
       stroke-dasharray: calc(#{$PI} * 20px);
       stroke-dashoffset: calc(#{$PI} * 20px);
       animation: svg-spinner-rotation-small 3s linear infinite 0s;
+
+      @at-root .is-ie11-svg-spinner & {
+        stroke-dasharray: 50px;
+        stroke-dashoffset: 0;
+      }
     }
 
     &--normal {
@@ -141,6 +168,11 @@ $PI: 3.141592;
       stroke-dasharray: calc(#{$PI} * 40px);
       stroke-dashoffset: calc(#{$PI} * 40px);
       animation: svg-spinner-rotation-normal 3s linear infinite 0s;
+
+      @at-root .is-ie11-svg-spinner & {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 0;
+      }
     }
 
     &--large {
@@ -148,6 +180,11 @@ $PI: 3.141592;
       stroke-dasharray: calc(#{$PI} * 80px);
       stroke-dashoffset: calc(#{$PI} * 80px);
       animation: svg-spinner-rotation-large 3s linear infinite 0s;
+
+      @at-root .is-ie11-svg-spinner & {
+        stroke-dasharray: 200px;
+        stroke-dashoffset: 0;
+      }
     }
   }
 }
