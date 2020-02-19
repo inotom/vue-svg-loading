@@ -53,7 +53,7 @@ new Vue({
 </template>
 
 <script>
-import SvgLoading from '@inotom/vue-svg-loading';
+import { SvgLoading } from '@inotom/vue-svg-loading';
 
 export default {
   components: {
