@@ -86,58 +86,58 @@ $PI: 3.141592;
 
 @keyframes svg-spinner-rotation-small {
   0% {
-    transform: rotate(0deg);
-    stroke-dashoffset: calc(#{$PI} * 20px / 1.5);
+    transform: rotate(-720deg);
+    stroke-dashoffset: calc(#{$PI} * 20px / 1.25);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
     stroke-dashoffset: calc(#{$PI} * 20px / 8);
   }
   100% {
-    transform: rotate(720deg);
-    stroke-dashoffset: calc(#{$PI} * 20px / 1.5);
+    transform: rotate(0deg);
+    stroke-dashoffset: calc(#{$PI} * 20px / 1.25);
   }
 }
 
 @keyframes svg-spinner-rotation-normal {
   0% {
-    transform: rotate(0deg);
-    stroke-dashoffset: calc(#{$PI} * 40px / 1.5);
+    transform: rotate(-720deg);
+    stroke-dashoffset: calc(#{$PI} * 40px / 1.25);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
     stroke-dashoffset: calc(#{$PI} * 40px / 8);
   }
   100% {
-    transform: rotate(720deg);
-    stroke-dashoffset: calc(#{$PI} * 40px / 1.5);
+    transform: rotate(0deg);
+    stroke-dashoffset: calc(#{$PI} * 40px / 1.25);
   }
 }
 
 @keyframes svg-spinner-rotation-large {
   0% {
-    transform: rotate(0deg);
-    stroke-dashoffset: calc(#{$PI} * 80px / 1.5);
+    transform: rotate(-720deg);
+    stroke-dashoffset: calc(#{$PI} * 80px / 1.25);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
     stroke-dashoffset: calc(#{$PI} * 80px / 8);
   }
   100% {
-    transform: rotate(720deg);
-    stroke-dashoffset: calc(#{$PI} * 80px / 1.5);
+    transform: rotate(0deg);
+    stroke-dashoffset: calc(#{$PI} * 80px / 1.25);
   }
 }
 
 @keyframes svg-spinner-rotation-ie11 {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(-720deg);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   100% {
-    transform: rotate(720deg);
+    transform: rotate(0deg);
   }
 }
 
