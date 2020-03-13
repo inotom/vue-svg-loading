@@ -2,6 +2,7 @@
 
 // Import vue component
 import SvgLoading from '@components/SvgLoading.vue';
+import SvgSpinner from '@components/SvgSpinner.vue';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
@@ -10,6 +11,7 @@ export function install(Vue) {
   }
   install.installed = true;
   Vue.component('svg-loading', SvgLoading);
+  Vue.component('svg-spinner', SvgSpinner);
 }
 
 // Create module definition for Vue.use()
@@ -29,4 +31,4 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default SvgLoading;
+export { SvgLoading, SvgSpinner };

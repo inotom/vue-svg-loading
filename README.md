@@ -21,7 +21,7 @@ SVG loading animation Vue.js component.
 ### npm
 
 ```
-npm install --save @inotom/vue-svg-loading
+npm install -D @inotom/vue-svg-loading
 ```
 
 
@@ -32,6 +32,7 @@ npm install --save @inotom/vue-svg-loading
 ```html
 <div id="app">
   <svg-loading></svg-loading>
+  <svg-spinner></svg-spinner>
 </div>
 
 <script src="vue.js"></script>
@@ -50,14 +51,16 @@ new Vue({
 ```vue
 <template>
   <svg-loading></svg-loading>
+  <svg-spinner></svg-spinner>
 </template>
 
 <script>
-import SvgLoading from '@inotom/vue-svg-loading';
+import { SvgLoading, SvgSpinner } from '@inotom/vue-svg-loading';
 
 export default {
   components: {
-    SvgLoading
+    SvgLoading,
+    SvgSpinner,
   }
 }
 </script>
@@ -66,10 +69,20 @@ export default {
 
 ## Props
 
+### svg-loading
+
 | name    | type     | defaults | description              |
 |---------|----------|----------|--------------------------|
 | `:size` | `Number` | `50`     | width/height pixel size  |
 | `fill`  | `String` | `#666`   | SVG fill color           |
+
+
+### svg-spinner
+
+| name    | type     | defaults | description                      |
+|---------|----------|----------|----------------------------------|
+| `size`  | `String` | `normal` | Size name (normal, small, large) |
+| `fill`  | `String` | `#666`   | SVG spinner circle  color        |
 
 
 ## License
