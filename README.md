@@ -1,11 +1,12 @@
-# vue-svg-loading
+# @inotom/vue-svg-loading
 
 SVG loading animation Vue.js component.
 
+From v3.0.0, it works for Vue 3.
 
 ## Demo
 
-[Demo](http://sandbox.serendip.ws/vue-svg-loading.html)
+[Demo](https://sandbox.serendip.ws/vue-svg-loading.html)
 
 
 ## Install
@@ -13,15 +14,15 @@ SVG loading animation Vue.js component.
 ### Browser
 
 ```html
-<script src="vue.js"></script>
-<script src="vue-svg-loading.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="vue-svg-loading.umd.js"></script>
 ```
 
 
 ### npm
 
 ```
-npm install -D @inotom/vue-svg-loading
+npm install --save @inotom/vue-svg-loading
 ```
 
 
@@ -35,35 +36,33 @@ npm install -D @inotom/vue-svg-loading
   <svg-spinner></svg-spinner>
 </div>
 
-<script src="vue.js"></script>
-<script src="vue-svg-loading.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="vue-svg-loading.umd.js"></script>
 <script>
-Vue.use(SvgLoading);
-new Vue({
-  el: '#app'
-});
+const { createApp } = Vue;
+const { SvgLoading, SvgSpinner } = SwsVueSvgLoading;
+
+createApp({
+  components: {
+    SvgLoading,
+    SvgSpinner,
+  },
+}).mount('#app');
 </script>
 ```
 
 
-### SFC
+### SFC (TypeScript)
 
 ```vue
+<script setup lang="ts">
+import { SvgLoading, SvgSpinner } from '@inotom/vue-svg-loading';
+</script>
+
 <template>
   <svg-loading></svg-loading>
   <svg-spinner></svg-spinner>
 </template>
-
-<script>
-import { SvgLoading, SvgSpinner } from '@inotom/vue-svg-loading';
-
-export default {
-  components: {
-    SvgLoading,
-    SvgSpinner,
-  }
-}
-</script>
 ```
 
 
@@ -79,10 +78,11 @@ export default {
 
 ### svg-spinner
 
-| name    | type     | defaults | description                      |
-|---------|----------|----------|----------------------------------|
-| `size`  | `String` | `normal` | Size name (normal, small, large) |
-| `fill`  | `String` | `#666`   | SVG spinner circle  color        |
+| name     | type     | defaults | description                          |
+|----------|----------|----------|--------------------------------------|
+| `size`   | `number` | `50`     | width/height pixel size              |
+| `weight` | `number` | `5`      | SVG spinner circle weight pixel size |
+| `fill`   | `String` | `#666`   | SVG spinner circle  color            |
 
 
 ## License

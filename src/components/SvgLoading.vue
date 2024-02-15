@@ -1,3 +1,15 @@
+<script setup lang="ts">
+interface Props {
+  size?: number;
+  fill?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+  size: 50,
+  fill: '#666',
+});
+</script>
+
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -19,21 +31,6 @@
     />
   </svg>
 </template>
-
-<script>
-export default {
-  props: {
-    size: {
-      type: Number,
-      default: 50
-    },
-    fill: {
-      type: String,
-      default: '#666'
-    }
-  }
-};
-</script>
 
 <style lang="scss" scoped>
 .svg-loading {
